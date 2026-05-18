@@ -1,0 +1,7 @@
+business_key,report_status,report_amount,reporting_loaded_at
+ORD-1001,completed,120.00,2026-04-01 09:20:00
+ORD-1002,completed,75.50,2026-04-01 09:40:00
+ORD-1002,completed,75.50,2026-04-01 09:45:00
+ORD-1003,completed,42.00,2026-04-01 10:20:00
+ORD-1004,completed,20.99,2026-04-01 11:15:00
+ORD-1005,completed,88.00,2026-04-01 15:30:00

@@ -1,0 +1,7 @@
+business_key,source_status,source_amount,source_updated_at
+ORD-1001,completed,120.00,2026-04-01 09:00:00
+ORD-1002,completed,75.50,2026-04-01 09:15:00
+ORD-1003,pending,42.00,2026-04-01 10:00:00
+ORD-1004,completed,19.99,2026-04-01 11:00:00
+ORD-1005,completed,88.00,2026-04-01 12:00:00
+ORD-1006,completed,61.25,2026-04-01 12:30:00

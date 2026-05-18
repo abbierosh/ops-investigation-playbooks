@@ -27,10 +27,12 @@ This repo shows how I investigate platform issues, validate data, and improve re
 - `case-studies/`: short examples
 - `systems-thinking/`: repeated patterns
 - `integration-analysis/`: payload and integration checks
+- `tools/`: small Python checks that run locally
+- `sample-data/`: fake CSV data for the Python example
 
 ## Relevant Skills
 
-SQL, Business Analysis, Operations Analysis, Reporting Validation, Data Quality Checks, Root Cause Analysis, Workflow Analysis, Process Improvement, Stakeholder Communication, Systems Thinking
+SQL, Python, Business Analysis, Operations Analysis, Reporting Validation, Data Quality Checks, Root Cause Analysis, Workflow Analysis, Process Improvement, Stakeholder Communication, Systems Thinking
 
 ## Notes
 
@@ -43,5 +45,14 @@ SQL, Business Analysis, Operations Analysis, Reporting Validation, Data Quality 
 1. [`framework/investigation-framework.md`](framework/investigation-framework.md)
 2. [`data-quality-checks/`](data-quality-checks/)
 3. [`reporting-validation/reconciliation-check.sql`](reporting-validation/reconciliation-check.sql)
-4. [`case-studies/reporting-gap-vs-real-incident.md`](case-studies/reporting-gap-vs-real-incident.md)
-5. [`process-improvements/`](process-improvements/)
+4. [`tools/reconcile_reporting.py`](tools/reconcile_reporting.py)
+5. [`case-studies/reporting-gap-vs-real-incident.md`](case-studies/reporting-gap-vs-real-incident.md)
+
+Run the Python example:
+
+```bash
+python3 tools/reconcile_reporting.py \
+  --source sample-data/source_records.csv \
+  --reporting sample-data/reporting_records.csv \
+  --output sample-data/reconciliation_output.csv
+```

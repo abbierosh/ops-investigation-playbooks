@@ -1,0 +1,7 @@
+business_key,source_status,report_status,source_amount,report_amount,source_updated_at,first_loaded_at,last_loaded_at,reporting_row_count,reconciliation_status
+ORD-1001,completed,completed,120.00,120.00,2026-04-01 09:00:00,2026-04-01 09:20:00,2026-04-01 09:20:00,1,reconciled
+ORD-1002,completed,completed,75.50,75.50,2026-04-01 09:15:00,2026-04-01 09:40:00,2026-04-01 09:45:00,2,duplicate_reporting_rows
+ORD-1003,pending,completed,42.00,42.00,2026-04-01 10:00:00,2026-04-01 10:20:00,2026-04-01 10:20:00,1,status_mismatch
+ORD-1004,completed,completed,19.99,20.99,2026-04-01 11:00:00,2026-04-01 11:15:00,2026-04-01 11:15:00,1,amount_mismatch
+ORD-1005,completed,completed,88.00,88.00,2026-04-01 12:00:00,2026-04-01 15:30:00,2026-04-01 15:30:00,1,delayed_reporting_load
+ORD-1006,completed,,61.25,,2026-04-01 12:30:00,,,0,missing_from_reporting
