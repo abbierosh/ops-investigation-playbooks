@@ -1,53 +1,26 @@
 # Delayed Data vs Missing Data
 
-One of the easiest ways to misread a platform issue is to confuse delayed data with missing data.
+Delayed and missing data can look the same:
 
-They can look identical at first:
+- low counts
+- missing reporting events
+- incomplete workflow
 
-- counts are lower than expected
-- events are absent from reporting
-- a workflow appears incomplete
+## Delayed
 
-But they usually mean very different things.
+The record appears later than expected.
 
-## Delayed data
+Usually: queueing, processing lag, late ingestion, or reporting catching up.
 
-Delayed data means the expected record appears later than normal.
+## Missing
 
-Operationally, this often points to:
+The record never appears.
 
-- queueing delays
-- downstream processing lag
-- late-arriving event ingestion
-- reporting layers catching up behind source records
+Usually: workflow, eligibility, integration, payload, mapping, or write issue.
 
-## Missing data
-
-Missing data means the expected record never appears at all.
-
-That usually points more toward:
-
-- a workflow not firing
-- a bad eligibility or targeting condition
-- an integration failure
-- a payload or mapping issue
-- a broken write into the next system stage
-
-## Why this distinction matters
-
-If delayed data is treated as missing data, teams escalate too early and can misdiagnose the issue.
-
-If missing data is treated as delayed data, teams wait too long and the real failure persists.
-
-## What I normally check
+## Check
 
 - are counts still moving?
-- do source records exist even if reporting is incomplete?
-- is this isolated to one event type or one stage of the workflow?
-- do similar cases from the same time window show the same pattern?
-
-## Analyst / Operations Angle
-
-This is one of the most useful distinctions in operational work because it affects communication as much as diagnosis.
-
-Customers and internal teams do not experience "delayed vs missing" as a technical nuance. They experience it as trust or uncertainty. Good operational visibility should help teams tell the difference earlier.
+- does the source record exist?
+- is reporting behind the source?
+- is this one event type or wider?

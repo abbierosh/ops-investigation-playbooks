@@ -1,18 +1,7 @@
 -- Investigation: campaign performance validation
 --
--- Typical use:
--- A campaign looks unusually weak or unusually strong in reporting, and we need
--- to validate whether the result reflects real behaviour or incomplete event data.
---
--- Investigation goal:
--- 1. Compare audience size to actual sends
--- 2. Check whether downstream events exist in believable proportions
--- 3. Flag campaigns where the numbers suggest timing issues or data loss
---
--- Notes:
--- - This is intentionally framed as a validation query, not a reporting query
--- - Use a narrow date range during active investigations to avoid mixing in old noise
--- - In real use, I would usually pair this with campaign status, revision, or queue checks
+-- Used when reporting looks unusual and I need to check whether the event data
+-- is complete enough to trust.
 
 WITH campaign_scope AS (
     SELECT
@@ -71,31 +60,3 @@ FROM campaign_scope cs
 LEFT JOIN event_rollup er
     ON cs.campaign_id = er.campaign_id
 ORDER BY cs.scheduled_at DESC, cs.campaign_id;
-
--- Why this is useful:
--- This query helps answer a common operational question:
--- "Is the campaign actually underperforming, or are the underlying numbers incomplete?"
---
--- It also gives you a quick way to spot broken event relationships, which is often
--- more useful during triage than looking at percentages alone.
---
--- What decision this helps drive:
--- - whether to trust reported campaign performance
--- - whether to escalate as a delivery / event issue
--- - whether internal teams can respond with confidence or need engineering input
---
--- What this helps rule out:
--- - a performance issue that is actually a data completeness problem
--- - a missing-send concern when sends are present but downstream events are delayed
--- - bad campaign content being blamed for what is really broken event flow
---
--- Systems thinking:
--- The trade-off here is that summary metrics are quick to consume but can create
--- false confidence when event timing is incomplete. From a user perspective, a
--- dashboard that looks final before the data has settled is worse than one that is
--- explicitly marked as still processing.
---
--- What could be improved in the system:
--- - clearer freshness indicators on campaign reporting
--- - better visibility into event processing stages
--- - guardrails when counts break expected relationships

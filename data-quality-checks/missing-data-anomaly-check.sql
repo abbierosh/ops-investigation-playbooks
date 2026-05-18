@@ -1,18 +1,6 @@
 -- Investigation: missing data / anomaly check
 --
--- Typical use:
--- A dashboard or stakeholder report shows a sudden drop in daily event volume,
--- and we need to work out whether this is a genuine behaviour change or a data issue.
---
--- Investigation goal:
--- 1. Compare recent daily volume to a short historical baseline
--- 2. Look for missing days, sharp drops, or suspicious spikes
--- 3. Give a simple operational interpretation so triage can move quickly
---
--- Notes:
--- - The baseline window here is short on purpose; during investigations, recent
---   operational history is usually more useful than long-range averages
--- - If weekends behave differently in your environment, segment by weekday next
+-- Compares recent event volume against a short baseline.
 
 WITH daily_event_counts AS (
     SELECT
@@ -54,13 +42,3 @@ SELECT
     END AS anomaly_flag
 FROM scored_days
 ORDER BY event_date DESC;
-
--- Why this is useful:
--- When a chart looks wrong, this check gives a quick signal on whether the issue
--- is likely to be ingestion, delayed processing, or a genuine change in usage.
---
--- If a day is flagged, the next move is usually to break the same volume down by:
--- - source table
--- - event type
--- - customer segment
--- - ingestion or processing hour

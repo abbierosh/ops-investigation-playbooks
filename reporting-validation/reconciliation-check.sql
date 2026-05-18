@@ -1,18 +1,7 @@
 -- Investigation: source-to-reporting reconciliation check
 --
--- Typical use:
--- A report does not match what teams expect from the source system, and we need
--- to understand whether records are missing, delayed, duplicated, or mismatched.
---
--- Investigation goal:
--- 1. Compare source records with reporting output for the same business key
--- 2. Flag missing, delayed, duplicated, or value-mismatched records
--- 3. Produce a clear validation status that can be explained to non-technical teams
---
--- Notes:
--- - Table and column names are generic placeholders
--- - This is a validation pattern, not a finance-specific example
--- - In real use, the business key should be the most stable shared identifier
+-- Compares source records with reporting output to find missing, delayed,
+-- duplicated, or mismatched records.
 
 WITH source_records AS (
     SELECT
@@ -81,13 +70,3 @@ ORDER BY
         ELSE 6
     END,
     sr.source_updated_at DESC;
-
--- Why this is useful:
--- This pattern helps separate a real operational issue from a reporting issue.
--- It gives teams a quick way to see whether the source record exists, whether it
--- reached reporting, and whether the reported values still match the source.
---
--- What decision this helps drive:
--- - whether a report can be trusted for the current period
--- - whether the issue is missing data, delayed loading, duplication, or mismatch
--- - whether the next step belongs with data operations, systems, or process owners
