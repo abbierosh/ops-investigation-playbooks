@@ -42,9 +42,9 @@ They usually affect:
 
 - whether a user enters the right workflow
 - whether reporting and segmentation stay trustworthy
-- whether support can explain what happened confidently
+- whether internal teams can explain what happened confidently
 
-## Product Ops angle
+## Analyst / Operations Angle
 
 If the same payload mistakes keep appearing, the problem is probably bigger than one bad request.
 

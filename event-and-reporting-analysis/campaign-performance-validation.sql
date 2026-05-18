@@ -82,14 +82,14 @@ ORDER BY cs.scheduled_at DESC, cs.campaign_id;
 -- What decision this helps drive:
 -- - whether to trust reported campaign performance
 -- - whether to escalate as a delivery / event issue
--- - whether support can respond with confidence or needs engineering input
+-- - whether internal teams can respond with confidence or need engineering input
 --
 -- What this helps rule out:
 -- - a performance issue that is actually a data completeness problem
 -- - a missing-send concern when sends are present but downstream events are delayed
 -- - bad campaign content being blamed for what is really broken event flow
 --
--- Product thinking:
+-- Systems thinking:
 -- The trade-off here is that summary metrics are quick to consume but can create
 -- false confidence when event timing is incomplete. From a user perspective, a
 -- dashboard that looks final before the data has settled is worse than one that is

@@ -38,7 +38,7 @@ The risk is not just missing a true failure. It is also overreacting to temporar
 
 Signal-based monitoring gives a much better early read on what kind of issue you are actually dealing with.
 
-## Product Ops angle
+## Analyst / Operations Angle
 
 The best monitoring is not just technically correct. It helps teams make better decisions faster.
 

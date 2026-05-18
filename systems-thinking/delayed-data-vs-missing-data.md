@@ -46,7 +46,7 @@ If missing data is treated as delayed data, teams wait too long and the real fai
 - is this isolated to one event type or one stage of the workflow?
 - do similar cases from the same time window show the same pattern?
 
-## Product Ops angle
+## Analyst / Operations Angle
 
 This is one of the most useful distinctions in operational work because it affects communication as much as diagnosis.
 

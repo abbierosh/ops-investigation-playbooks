@@ -10,7 +10,7 @@ Things like:
 - was this subscriber bounced, unsubscribed, or never targeted?
 - are we missing data, or are we looking at a partial day?
 
-When L1 teams cannot answer those safely, the work gets escalated too quickly. That creates noise for Product Ops and Engineering, and it slows down customer responses.
+When first-line teams cannot answer those safely, the work gets escalated too quickly. That creates noise for specialist teams, and it slows down responses.
 
 ## Approach
 
@@ -23,17 +23,17 @@ The better improvement is to identify the small set of recurring checks and expo
 - recent bounce / unsubscribe summary
 - reporting freshness check
 
-That can be done through internal extracts, lightweight dashboards, or pre-approved support tooling depending on the environment.
+That can be done through internal extracts, lightweight dashboards, or pre-approved operational tooling depending on the environment.
 
 ## Reasoning
 
 Most escalations are not valuable because they are complex. They are escalated because the evidence is hard to access or hard to interpret.
 
-If the first-line team can answer the predictable questions themselves, Product Ops can spend more time on the genuinely unclear cases:
+If the first-line team can answer the predictable questions themselves, analyst and operations teams can spend more time on the genuinely unclear cases:
 
 - cross-system inconsistencies
 - workflow edge cases
-- repeated product issues
+- repeated system issues
 - incidents that need recommendation, not just lookup
 
 ## Impact
@@ -43,7 +43,7 @@ If the first-line team can answer the predictable questions themselves, Product 
 - more consistent investigation quality
 - better use of specialist time
 
-## Product Ops Lens
+## Analyst / Operations Lens
 
 This is one of the clearest ways operations work improves product delivery.
 

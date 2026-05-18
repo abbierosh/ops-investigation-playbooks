@@ -1,30 +1,42 @@
-# SQL Investigation Playbooks
+# Systems, Data & Operations Investigation Playbooks
 
-I work in Product Operations / Technical Operations, mostly in the gap between what the product is meant to do, what the data says, and what customers are actually experiencing.
+I work across systems, data, and operations, mostly in the space between what a platform was expected to do, what the data shows, and what teams need to understand next.
 
-That usually means I am not just writing SQL. Most of the time I am trying to answer questions like:
+Most of my work starts with practical questions:
 
-- what actually happened in the system?
-- is this a bug, bad data, timing, configuration, or expected behaviour?
-- what does this mean for customers and internal teams?
-- what should we fix so the same issue is easier to detect or easier to prevent next time?
+- what happened in the platform?
+- why did it happen?
+- who or what was affected?
+- is the issue caused by data, timing, configuration, workflow, or expected behaviour?
+- what should teams do next?
 
-This repo is really a collection of how I work through those problems.
+This repo contains generic and anonymised examples of how I approach that kind of work: investigation notes, SQL checks, validation playbooks, monitoring ideas, reporting checks, and process improvement examples.
 
-It is built around the kind of operational work I do day to day: campaign issues, event-level debugging, reporting gaps, workflow edge cases, API payload problems, data quality checks, and the follow-up thinking that turns a one-off issue into something the system or team can handle better next time.
+The examples are based on SaaS platform operations and technical investigations. The thinking is relevant to analyst roles where systems, data quality, reporting, and operational process all connect.
+
+## What This Repo Shows
+
+- SQL-based investigation and validation
+- Reporting and data quality checks
+- Workflow and process analysis
+- Root cause analysis
+- Operational monitoring
+- Turning repeated issues into clearer processes or documentation
+- Translating technical findings into business-friendly explanations
 
 ## What This Repo Covers
 
-- `playbooks/`: repeatable checks I come back to often
-- `campaign-event-analysis/`: campaign and event validation work
+- `playbooks/`: repeatable checks for common investigation patterns
+- `reporting-validation/`: reconciliation checks for source records and reporting output
+- `event-and-reporting-analysis/`: event and reporting validation work
 - `data-quality-checks/`: checks for missing, delayed, duplicated, or suspicious data
-- `troubleshooting-notes/`: how I frame, narrow, and document live issues
+- `incident-analysis-notes/`: how I frame, narrow, and document live issues
 - `framework/`: the investigation mindset behind the queries
-- `improvements/`: examples of how investigation work turns into monitoring, tooling, and product improvements
-- `case-studies/`: short examples of how I work through real operational questions
-- `systems-thinking/`: notes on the patterns that sit behind repeated issues
-- `monitoring-logic/`: the signals I would want the platform to surface earlier
-- `api-debugging-notes/`: how I think through payload and integration issues
+- `process-improvements/`: examples of how repeated issues can become clearer processes, monitoring, or handoff points
+- `case-studies/`: short examples of working through operational questions
+- `systems-thinking/`: notes on patterns behind repeated issues
+- `monitoring-logic/`: signals that could help teams spot issues earlier
+- `integration-analysis/`: payload and integration analysis notes
 
 ## How I Work
 
@@ -33,8 +45,8 @@ The query is rarely the starting point.
 I usually start by trying to pin down three things:
 
 - what the system was supposed to do
-- what the customer or internal team experienced
-- where the smallest reliable evidence sits
+- what actually happened
+- where the most reliable evidence sits
 
 From there, SQL is one tool in a bigger workflow:
 
@@ -43,35 +55,46 @@ From there, SQL is one tool in a bigger workflow:
 - check timestamps, ordering, and completeness
 - work out whether the issue is isolated or systemic
 - separate confirmed facts from assumptions
-- decide what needs to happen next
+- explain the finding clearly enough for the next team to act on it
 
-Sometimes the next step is a fix. Sometimes it is a product change. Sometimes it is better monitoring, clearer tooling, or a process change so the same confusion does not keep coming back.
+Sometimes the next step is a fix. Sometimes it is better monitoring, clearer documentation, a process change, or a cleaner handoff between teams.
 
-## Why i enjoy it
+## Why I Enjoy This Work
 
-This kind of work sits between product, support, engineering, and data, which is probably why I like it.
+I like work that starts messy and becomes clearer through evidence. Systems, data, and operations work is useful because it helps teams move from uncertainty to a practical next step.
 
-You need enough product understanding to know what should happen, enough system understanding to trace where it broke, and enough operational judgement to turn findings into something useful. That might be a customer answer, an engineering handoff, a monitoring recommendation, or a workflow improvement for internal teams.
+## How This Translates To Analyst Work
 
-That is what I wanted this repo to show.
+- Investigation work becomes business analysis when it helps clarify what happened, who was affected, and what needs to change.
+- SQL checks become reporting validation when they help confirm whether data is complete, delayed, duplicated, or incorrect.
+- Troubleshooting becomes operations improvement when repeated issues turn into clearer processes, monitoring, documentation, or better handoff points.
+- System understanding becomes stakeholder value when technical findings are translated into clear next steps.
 
-## How This Translates To Product Ops
+## Relevant Skills
 
-- Debugging becomes product insight when repeated issue patterns show where the product is confusing, fragile, or missing visibility.
-- Investigation becomes system improvement when one-off issues turn into better alerts, better tooling, or better workflows.
-- Data checks become decision-making when they help teams distinguish between a real problem, a timing issue, and a reporting artefact.
+- SQL
+- Business Analysis
+- Operations Analysis
+- Reporting Validation
+- Data Quality Checks
+- Root Cause Analysis
+- Workflow Analysis
+- Process Improvement
+- Stakeholder Communication
+- Systems Thinking
 
 ## Notes
 
-- Everything here is generic and anonymised
-- The patterns are based on real operational work, but sensitive detail has been removed
-- The comments explain investigation intent and decision-making, not just SQL syntax
-- The goal is to show how I think through platform issues, not to build a tutorial repo or a generic SQL portfolio
+- Everything here is generic and anonymised.
+- The patterns are based on real operational work, but sensitive detail has been removed.
+- No client names, internal systems, production data, or confidential details are included.
+- The comments explain investigation intent and decision-making, not just SQL syntax.
+- The goal is to show how I think through platform, data, and workflow issues.
 
-## Starting Points
+## Good Starting Points
 
-1. Read [`framework/investigation-framework.md`](framework/investigation-framework.md)
-2. Look at [`playbooks/interaction-history-check.sql`](playbooks/interaction-history-check.sql)
-3. Review [`troubleshooting-notes/send-delay-triage-notes.md`](troubleshooting-notes/send-delay-triage-notes.md)
-4. Read [`case-studies/reporting-gap-vs-real-incident.md`](case-studies/reporting-gap-vs-real-incident.md)
-5. Read the improvement notes to see how investigation work can lead to better operations and product decisions
+1. [`framework/investigation-framework.md`](framework/investigation-framework.md) - how I structure system and data investigations
+2. [`data-quality-checks/`](data-quality-checks/) - examples of validation checks for missing, delayed, or duplicated data
+3. [`monitoring-logic/`](monitoring-logic/) - how repeated issues can become earlier detection signals
+4. [`case-studies/reporting-gap-vs-real-incident.md`](case-studies/reporting-gap-vs-real-incident.md) - how I separate real incidents from reporting gaps
+5. [`process-improvements/`](process-improvements/) - examples of how investigation work can lead to better workflows

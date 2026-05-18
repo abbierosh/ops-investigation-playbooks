@@ -1,10 +1,10 @@
-# Campaign Event Analysis
+# Event And Reporting Analysis
 
-This folder is for checking whether campaign performance looks believable.
+This folder is for checking whether event and reporting output looks believable.
 
 In practice, campaign investigations are rarely just about "what was the open rate?" The real question is usually one of these:
 
-- did the campaign actually send to the audience we expected?
+- did the expected activity happen for the audience or workflow we expected?
 - are event counts still catching up?
 - is a low metric real, or is the underlying event stream incomplete?
 - is the issue specific to one campaign, one segment, or one delivery window?

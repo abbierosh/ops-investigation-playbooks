@@ -49,8 +49,8 @@ Instead of relying on a single status, it is often more useful to separate:
 - reporting freshness
 - final completion
 
-## Product Ops angle
+## Analyst / Operations Angle
 
-Repeated confusion around statuses is rarely just a support problem. It often points to a product design issue.
+Repeated confusion around statuses is rarely just a training problem. It often points to a system communication issue.
 
 If a label is technically accurate but regularly leads teams to the wrong conclusion, then the system is still failing to communicate something important.

@@ -74,7 +74,7 @@ ORDER BY last_event_at DESC NULLS LAST;
 -- - "The platform never sent" when the real issue is post-send behaviour
 -- - premature escalation before basic profile-level history is confirmed
 --
--- Product thinking:
+-- Systems thinking:
 -- One recurring lesson from checks like this is that internal teams often need a
 -- simpler way to see subscriber history without reaching for SQL. If a case depends
 -- on manual validation every time, that is usually a tooling gap, not just an ops task.

@@ -1,4 +1,4 @@
-# Improvements
+# Process Improvements
 
 A useful investigation should do more than answer the immediate question.
 
@@ -9,6 +9,6 @@ This folder captures that second layer of thinking:
 - what repeated incidents are telling us
 - where monitoring is too weak
 - where internal teams need better tools
-- where product behaviour is technically correct but operationally difficult
+- where system behaviour is technically correct but operationally difficult
 
-This is the part of the work that turns debugging into improvement.
+This is the part of the work that turns repeated investigation patterns into better process.

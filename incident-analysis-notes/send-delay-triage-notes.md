@@ -76,7 +76,7 @@ Could be genuine low engagement, but if it appears suddenly across multiple camp
 Decision this supports:
 do not frame it as a content-performance issue until tracking behaviour has been validated.
 
-## Product thinking
+## Systems Thinking
 
 This kind of issue usually means the platform is missing an operational layer between raw system state and user expectation.
 

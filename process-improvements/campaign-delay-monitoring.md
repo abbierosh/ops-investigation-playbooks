@@ -7,7 +7,7 @@ One of the more frustrating classes of issues is when a campaign looks "sent" fr
 This creates a few problems at once:
 
 - customer-facing teams lose confidence in the platform
-- support spends time manually checking whether counts are still moving
+- teams spend time manually checking whether counts are still moving
 - engineering gets escalations before it is clear whether the issue is missing data or delayed processing
 
 ## Approach
@@ -41,7 +41,7 @@ Without visibility, teams end up asking the same questions repeatedly:
 - is reporting behind?
 - should we message the customer yet?
 
-A simple delay monitor reduces that ambiguity early. It also gives support and ops a more defensible answer before an issue becomes a bigger escalation.
+A simple delay monitor reduces that ambiguity early. It also gives teams a more defensible answer before an issue becomes a bigger escalation.
 
 ## Impact
 
@@ -50,8 +50,8 @@ A simple delay monitor reduces that ambiguity early. It also gives support and o
 - clearer internal communication during active incidents
 - better separation between true send failures and temporary lag
 
-## Product Ops Lens
+## Analyst / Operations Lens
 
 This is not just a technical alert.
 
-It improves the customer experience indirectly by making the platform easier to explain, easier to support, and less dependent on ad hoc SQL checks when something feels off.
+It improves the customer experience indirectly by making the platform easier to explain and less dependent on ad hoc SQL checks when something feels off.
