@@ -1,6 +1,6 @@
-# Systems, Data & Operations Investigation Playbooks
+# Ops Investigation Playbooks
 
-I work across systems, data, and operations.
+Reusable systems, data, and operations investigation examples.
 
 This repo shows how I investigate platform issues, validate data, and improve repeated workflows.
 
